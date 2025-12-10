@@ -6,41 +6,25 @@ const createId = () => (typeof crypto !== 'undefined' && typeof crypto.randomUUI
 const defaultPosts = [
     {
         id: createId(),
-        title: 'Hydrogen-ready offshore turbines: lessons from HT1 Aberdeen Bay',
-        date: '2025-02-18',
-        category: 'Hydrogen & Floating',
-        excerpt: 'Coordinating offshore wind with hydrogen production while keeping lenders confident.',
-        content: 'From hybrid dispatch strategy to certifier alignment, we unpack how the 8MW Aberdeen Bay concept balanced technical risk, commercial viability, and control constraints.'
+        title: 'Designing bankable wind projects with integrated PMO',
+        date: '2025-01-12',
+        category: 'Project Management',
+        excerpt: 'How a disciplined PMO structure keeps complex offshore and hybrid wind projects on track.',
+        content: 'Robust governance aligns engineering, procurement, and financing milestones. We share the workflows Aldott uses to keep stakeholders aligned and risks transparent.'
     },
     {
         id: createId(),
-        title: 'Certification playbook for 294MW offshore portfolios',
-        date: '2025-01-22',
-        category: 'Certification',
-        excerpt: 'Structuring evidence for IEC 61400-22 and DNV-OS-J901 without slowing delivery.',
-        content: 'We share the Rentel OWF approach: stakeholder mapping, document readiness gates, and how to synchronize OEM, developer, and certifier timelines to protect budgets.'
-    },
-    {
-        id: createId(),
-        title: 'Bid-winning layouts: micro-siting for IRR and AEP',
-        date: '2025-02-05',
-        category: 'Wind Farm Layout',
-        excerpt: 'Building competitive offshore bids with calibrated wake models and SCADA validation.',
-        content: 'Drawing on GE and Vattenfall programs, we outline how to iterate mesoscale, turbulence, and curtailment assumptions to strengthen bankable IRR cases.'
-    },
-    {
-        id: createId(),
-        title: 'Automating loads, controllers, and lifetime extension',
-        date: '2024-12-14',
-        category: 'Training & Tools',
-        excerpt: 'Why automation-first load and control tooling saves millions annually for OEMs.',
-        content: 'We detail how Excel-VB, Flex5, and Bladed pipelines shortened DLC cycles, enabled lifetime extension reviews, and scaled training for certification bodies.'
+        title: 'Reducing wake uncertainty with mesoscale-informed layouts',
+        date: '2025-02-02',
+        category: 'Wind Resource',
+        excerpt: 'Lessons from pairing mesoscale modeling with SCADA diagnostics to unlock AEP upside.',
+        content: 'Bankable assessments depend on validation against operational data. We outline our validation steps, curtailment reviews, and how we communicate uncertainty to lenders.'
     },
     {
         id: createId(),
         title: 'Closing the loop on loads verification',
-        date: '2024-11-30',
-        category: 'Loads & Structural Design',
+        date: '2024-12-05',
+        category: 'Loads Assessment',
         excerpt: 'Coordinating aeroelastic simulations, DLC coverage, and controller tuning for certification.',
         content: 'From model fidelity to site-specific DLC selection, we discuss how Aldott navigates certification pathways for both fixed-bottom and floating assets.'
     }
