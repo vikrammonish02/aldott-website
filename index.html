@@ -3,105 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldott TechSolution - Wind Energy Consulting</title>
+    <title>Aldott TechSolution | Offshore & Onshore Wind Engineering Experts</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="blog.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">ALDOTT</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" aria-label="Aldott TechSolution">ALDOTT</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Your R&D Powerhouse for Global Wind Energy</h1>
-            <p class="hero-subtitle">Leveraging 17+ years of expertise to deliver innovative design, advanced loads analysis, and full-service certification for the world's leading energy projects.</p>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Aldott TechSolution</h2>
-            <p>Leading wind energy consulting firm specializing in advanced turbine design, comprehensive loads assessment, and project management for global renewable energy projects.</p>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Project Management</h3>
-                    <p>Expert guidance throughout your wind energy project lifecycle.</p>
-                    <ul>
-                        <li>Project planning and scheduling</li>
-                        <li>Risk assessment and mitigation</li>
-                    </ul>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Offshore &amp; Onshore Wind Engineering Experts</p>
+                    <h1>Designing, certifying &amp; optimizing wind turbines and farms worldwide</h1>
+                    <p class="hero-subtitle">Aldott is a Bremen-based consultancy founded by Vikram Rajput, an award-winning specialist with 17+ years across GE, UL, Vattenfall, DEWI OCC &amp; SANY. We deliver bankable outcomes from concept to certification.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#contact">Start a project</a>
+                        <a class="btn ghost" href="blog.html">View insights</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div class="metric">
+                            <span class="metric-value">17+</span>
+                            <span class="metric-label">Years of experience</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">10K</span>
+                            <span class="metric-label">Turbines enabled globally</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">€50M+</span>
+                            <span class="metric-label">Budgets coordinated</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Wind Resource Assessment</h3>
-                    <p>Comprehensive analysis of wind energy potential.</p>
-                    <ul>
-                        <li>Wind data analysis</li>
-                        <li>Energy yield predictions</li>
+                <div class="hero-panel">
+                    <div class="panel-header">
+                        <p>Core Capabilities</p>
+                        <span class="status">Available</span>
+                    </div>
+                    <ul class="panel-list">
+                        <li>
+                            <div>
+                                <p class="panel-title">Loads &amp; Structural Design</p>
+                                <p class="panel-desc">Fatigue &amp; extreme load simulations, foundation interfaces, controller tuning, and lifetime extension (IEC 61400).</p>
+                            </div>
+                            <span class="chip">IEC 61400</span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="panel-title">Wind Farm Layout &amp; AEP</p>
+                                <p class="panel-desc">Mesoscale validation, bid-stage energy strategy, wake loss mitigation, and lender-ready uncertainty breakdowns.</p>
+                            </div>
+                            <span class="chip">AEP</span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="panel-title">Project Certification</p>
+                                <p class="panel-desc">Type &amp; project certification (UL, DNV-OS-J, IEC 61400-22) with developer–OEM–certifier coordination.</p>
+                            </div>
+                            <span class="chip">DNV | UL</span>
+                        </li>
                     </ul>
+                    <div class="panel-footer">
+                        <p>Trusted by utilities, IPPs, and OEMs across offshore and onshore markets.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Loads Assessment</h3>
-                    <p>Detailed structural and operational load analysis.</p>
-                    <ul>
-                        <li>Structural load calculations</li>
-                        <li>Fatigue analysis</li>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container section-grid">
+                <div>
+                    <p class="eyebrow">About Aldott</p>
+                    <h2>Technical leadership anchored in global wind execution</h2>
+                    <p class="section-body">Aldott TechSolution is a Bremen-based engineering consultancy founded by Vikram Rajput. With 17+ years across GE, UL, Vattenfall, DEWI OCC &amp; SANY, we specialize in offshore and onshore wind turbine design, site conditions, loads, micro-siting, certification, and program management.</p>
+                    <div class="highlight-cards">
+                        <div class="highlight-card">
+                            <h3>Design to certification</h3>
+                            <p>Load reduction for Doosan 8MW offshore, UL lifetime extension co-author (UL 4143), and certification support for EWT.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h3>Execution at scale</h3>
+                            <p>Managed 75+ engineers and €50M+ budgets, delivering 10K GE turbines globally through site suitability and micro-siting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-panel">
+                    <h3>How we operate</h3>
+                    <ul class="credentials">
+                        <li>Bid-to-commissioning governance with transparent risk management</li>
+                        <li>Bankable AEP, wake, and uncertainty models calibrated with SCADA data</li>
+                        <li>Developer–OEM–certifier alignment for UL, DNV-OS-J, and IEC 61400-22</li>
+                        <li>Controller tuning, load validation, and lifetime extension pathways</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>HT1 Aberdeen Bay</h3>
-                    <p class="project-type">Offshore Wind + Hydrogen</p>
-                    <p>Managed technical and commercial coordination for integrating hydrogen production with offshore wind turbines.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Normandy I & II</h3>
-                    <p class="project-type">Large Scale Offshore</p>
-                    <p>Led wind farm layout design and AEP calculations, directly impacting project IRR.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Brittany Floating Wind</h3>
-                    <p class="project-type">Floating Offshore</p>
-                    <p>Led layout decisions and AEP calculations for Vattenfall's first floating wind project.</p>
+        <section id="services" class="section services">
+            <div class="container">
+                <p class="eyebrow">What we do</p>
+                <h2>Integrated expertise across the wind project lifecycle</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Wind Turbine Loads &amp; Structural Design</h3>
+                        <p>Fatigue &amp; extreme load simulations (IEC 61400 Ed 3 &amp; 4) and controller tuning for reliable assets.</p>
+                        <ul>
+                            <li>Foundation &amp; tower load interfaces</li>
+                            <li>Load validation support for TÜV, UL, DNV, BV</li>
+                            <li>Lifetime extension strategies</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">📐</div>
+                        <h3>Wind Farm Layout, AEP &amp; Micro-siting</h3>
+                        <p>IRR-driven optimization with validated mesoscale and SCADA diagnostics to unlock AEP upside.</p>
+                        <ul>
+                            <li>Bid-stage layout &amp; energy strategy for IPPs</li>
+                            <li>Wake, turbulence, shear, and terrain analysis</li>
+                            <li>50+ projects weekly enabled at GE</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">📜</div>
+                        <h3>Offshore Project Certification &amp; Management</h3>
+                        <p>Type &amp; project certification strategy with developer–OEM–certifier coordination.</p>
+                        <ul>
+                            <li>UL, DNV-OS-J, IEC 61400-22 compliance</li>
+                            <li>Technical package management from bid to commissioning</li>
+                            <li>€50M+ budgets &amp; 75+ engineer teams led</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🌊</div>
+                        <h3>Hydrogen &amp; Floating Offshore Integration</h3>
+                        <p>Hybrid dispatch and control constraints for next-generation offshore projects.</p>
+                        <ul>
+                            <li>Feasibility studies for offshore H₂ integration</li>
+                            <li>Floating layout &amp; control strategies</li>
+                            <li>Aberdeen Bay 8MW hydrogen integration concept</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">🧭</div>
+                        <h3>Expert Training, Tools &amp; Team Setup</h3>
+                        <p>Building high-performance load and control teams with automation-first tooling.</p>
+                        <ul>
+                            <li>Training for certification bodies in loads &amp; control</li>
+                            <li>Automated load calculation and controller systems</li>
+                            <li>Excel-VB tools saving $150M/year at GE</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Ready to discuss your wind energy project? Contact us today.</p>
-            <a href="mailto:contact@aldott.in" class="btn">Contact Us</a>
-        </div>
-    </section>
+        <section class="section sectors">
+            <div class="container section-grid">
+                <div>
+                    <p class="eyebrow">Sectors we serve</p>
+                    <h2>Partnering across the wind value chain</h2>
+                    <p class="section-body">We support OEMs, developers, investors, and certifiers with technology-agnostic engineering, governance, and decision frameworks.</p>
+                    <div class="pill-group">
+                        <span class="pill">Wind Turbine OEMs</span>
+                        <span class="pill">Wind Farm Developers &amp; IPPs</span>
+                        <span class="pill">Certification Bodies</span>
+                        <span class="pill">Technical Advisors</span>
+                        <span class="pill">Utilities &amp; Investors</span>
+                        <span class="pill">Hydrogen &amp; Floating Integrators</span>
+                    </div>
+                </div>
+                <div class="benefits-table">
+                    <h3>Why choose Aldott</h3>
+                    <div class="table-row table-head">
+                        <span>Your Benefit</span>
+                        <span>Delivered Through</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Design to Certification Expertise</strong></span>
+                        <span>Experience across GE, UL, DEWI OCC, Vattenfall, SANY</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Offshore Execution Capability</strong></span>
+                        <span>Managed €50M+ turbine site condition packages</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Complete Life-Cycle Support</strong></span>
+                        <span>Layout, loads, AEP, certification, commissioning</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Deep Standards Knowledge</strong></span>
+                        <span>IEC 61400, ISO, DNV-OS-J, UL lifetime extension</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Proven Innovation</strong></span>
+                        <span>US Patent + 10 global awards</span>
+                    </div>
+                    <div class="table-row">
+                        <span><strong>Efficiency Through Automation</strong></span>
+                        <span>Proprietary tools in VBA, Flex5, NREL FAST, Bladed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Aldott TechSolution. All rights reserved.</p>
+        <section id="projects" class="section projects">
+            <div class="container">
+                <p class="eyebrow">Flagship projects &amp; experience</p>
+                <h2>Delivering confident outcomes for complex assets</h2>
+                <div class="card-grid project-grid">
+                    <article class="card project-card">
+                        <header class="project-meta">
+                            <span class="pill">Offshore • Hydrogen</span>
+                            <span class="pill muted">HT1 Aberdeen Bay</span>
+                        </header>
+                        <h3>8MW offshore hydrogen turbine</h3>
+                        <p>Full technical &amp; commercial coordination proving offshore H₂ viability with hybrid dispatch and lender-ready documentation.</p>
+                    </article>
+                    <article class="card project-card">
+                        <header class="project-meta">
+                            <span class="pill">Offshore bid strategy</span>
+                            <span class="pill muted">Normandy I &amp; II (2GW)</span>
+                        </header>
+                        <h3>Layout, AEP &amp; IRR optimization</h3>
+                        <p>Bid-stage layouts, AEP, and uncertainty models guiding competitive IRR assumptions for major IPP auctions.</p>
+                    </article>
+                    <article class="card project-card">
+                        <header class="project-meta">
+                            <span class="pill">Floating wind</span>
+                            <span class="pill muted">Brittany 250MW</span>
+                        </header>
+                        <h3>Floating layout &amp; control constraints</h3>
+                        <p>Wake analysis, metocean review, and loads validation to de-risk foundation selection for Vattenfall's first floating concept.</p>
+                    </article>
+                    <article class="card project-card">
+                        <header class="project-meta">
+                            <span class="pill">Certification</span>
+                            <span class="pill muted">Rentel OWF</span>
+                        </header>
+                        <h3>294MW offshore certification</h3>
+                        <p>Project certification aligned to IEC 61400-22 &amp; DNV-OS-J901, coordinating stakeholders and evidence packages.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container section-grid">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let’s build your next wind project together</h2>
+                    <p class="section-body">Share your roadmap and we will assemble a delivery plan tailored to stakeholders, standards, and site conditions.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> <a href="mailto:vikram@aldott.de">vikram@aldott.de</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+4915211818515">+49 15211 818515</a></p>
+                        <p><strong>Location:</strong> Bremen, Germany • Projects delivered worldwide</p>
+                    </div>
+                </div>
+                <form class="contact-form" name="contact">
+                    <label>
+                        Full Name
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        Work Email
+                        <input type="email" name="email" placeholder="you@company.com" required>
+                    </label>
+                    <label>
+                        Project Overview
+                        <textarea name="message" rows="4" placeholder="Tell us about your objectives"></textarea>
+                    </label>
+                    <button type="submit" class="btn primary">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="logo">ALDOTT</p>
+                <p class="footer-copy">Aldott TechSolution delivers program leadership, bankable wind resource insights, and certified loads engineering for the next generation of wind assets.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="mailto:vikram@aldott.de">vikram@aldott.de</a>
+                <a href="tel:+4915211818515">+49 15211 818515</a>
+                <a href="admin.html">Blog admin</a>
+            </div>
         </div>
+        <p class="footer-bottom">&copy; 2025 Aldott TechSolution. All rights reserved.</p>
     </footer>
 </body>
 </html>
