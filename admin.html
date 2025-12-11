@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldott TechSolution | Blog Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="blog.js"></script>
+</head>
+<body class="admin">
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo" aria-label="Aldott TechSolution">ALDOTT</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html#home">Home</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <section class="blog-header">
+            <div class="container">
+                <p class="eyebrow">Admin</p>
+                <h1>Manage blog posts</h1>
+                <p class="section-body">Create, edit, and publish insights that appear on the public blog. The admin mirrors a LinkedIn-style composer and saves to the built-in API.</p>
+                <p id="api-status" class="api-status" aria-live="polite">Connecting…</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container admin-grid">
+                <form id="admin-form" class="admin-form composer-card" autocomplete="off">
+                    <div class="composer-header">
+                        <div class="avatar">AR</div>
+                        <div>
+                            <p class="eyebrow">Share an Aldott insight</p>
+                            <h3>Compose post</h3>
+                        </div>
+                    </div>
+                    <input type="hidden" id="post-id">
+                    <label>
+                        Title
+                        <input type="text" id="post-title" required placeholder="e.g., Certification playbook for 294MW offshore portfolios">
+                    </label>
+                    <div class="field-row">
+                        <label>
+                            Date
+                            <input type="date" id="post-date" required>
+                        </label>
+                        <label>
+                            Category
+                            <select id="post-category" required>
+                                <option value="Loads &amp; Structural Design">Loads &amp; Structural Design</option>
+                                <option value="Wind Farm Layout">Wind Farm Layout</option>
+                                <option value="Certification">Certification</option>
+                                <option value="Hydrogen &amp; Floating">Hydrogen &amp; Floating</option>
+                                <option value="Training &amp; Tools">Training &amp; Tools</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>
+                        Excerpt
+                        <textarea id="post-excerpt" rows="2" placeholder="Short teaser" required></textarea>
+                    </label>
+                    <label>
+                        Content
+                        <textarea id="post-content" rows="5" placeholder="Full post content" required></textarea>
+                    </label>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary" id="save-post">Publish</button>
+                        <button type="reset" class="btn ghost" id="reset-form">Clear</button>
+                        <button type="button" class="btn secondary" id="seed-posts">Reset sample posts</button>
+                    </div>
+                    <p class="helper-text">Save directly to the API (run <code>npm start</code>), or draft offline and sync later.</p>
+                    <p id="admin-status" class="status-text" aria-live="polite">Ready for a new post</p>
+                </form>
+
+                <div class="admin-list">
+                    <div class="list-header">
+                        <div>
+                            <p class="eyebrow">Pipeline</p>
+                            <h3>Latest posts</h3>
+                        </div>
+                        <span class="pill subtle">Public blog</span>
+                    </div>
+                    <div id="post-table" class="post-table" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="logo">ALDOTT</p>
+                <p class="footer-copy">Admin workspace for Aldott TechSolution content.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="mailto:vikram@aldott.de">vikram@aldott.de</a>
+                <a href="tel:+4915211818515">+49 15211 818515</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Aldott TechSolution. All rights reserved.</p>
+    </footer>
+</body>
+</html>
