@@ -523,6 +523,12 @@ h2 {
     background: rgba(255, 179, 71, 0.08);
 }
 
+.api-status[data-state="static"] {
+    color: #8ac0ff;
+    border-color: rgba(138, 192, 255, 0.35);
+    background: rgba(138, 192, 255, 0.08);
+}
+
 .composer-card {
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.12);

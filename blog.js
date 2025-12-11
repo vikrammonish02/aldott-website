@@ -1,5 +1,6 @@
 const API_URL = '/api/posts';
 const STORAGE_KEY = 'aldott_blog_posts';
+let dataSource = 'offline';
 
 const createId = () => (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
     ? crypto.randomUUID()
@@ -73,18 +74,32 @@ function saveLocalPosts(posts) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
 }
 
-function setApiStatus(healthy) {
-    apiHealthy = healthy;
+function setApiStatus(status) {
+    apiHealthy = status === 'live';
     const badge = document.getElementById('api-status');
     if (!badge) return;
-    badge.dataset.state = healthy ? 'online' : 'offline';
-    badge.textContent = healthy ? 'Live API connected' : 'Offline mode (local only)';
+    badge.dataset.state = status;
+    if (status === 'live') {
+        badge.textContent = 'Live API connected';
+    } else if (status === 'static') {
+        badge.textContent = 'Read-only static snapshot';
+    } else {
+        badge.textContent = 'Offline mode (local only)';
+    }
 }
 
 async function fetchFromApi() {
+    // Try live API first, then fall back to the static JSON snapshot used for GitHub Pages
     const response = await fetch(API_URL);
-    if (!response.ok) throw new Error('API unavailable');
-    return response.json();
+    if (response.ok) {
+        dataSource = 'live';
+        return response.json();
+    }
+
+    const staticResponse = await fetch('/api/posts/index.json');
+    if (!staticResponse.ok) throw new Error('API unavailable');
+    dataSource = 'static';
+    return staticResponse.json();
 }
 
 async function syncPosts() {
@@ -92,10 +107,10 @@ async function syncPosts() {
         const posts = await fetchFromApi();
         cachedPosts = Array.isArray(posts) ? posts : [];
         saveLocalPosts(cachedPosts);
-        setApiStatus(true);
+        setApiStatus(dataSource);
     } catch (err) {
         cachedPosts = loadLocalPosts();
-        setApiStatus(false);
+        setApiStatus('offline');
     }
     return cachedPosts;
 }
@@ -129,7 +144,7 @@ async function upsertPost(post) {
         }
         saveLocalPosts(fallbackPosts);
         cachedPosts = fallbackPosts;
-        setApiStatus(false);
+        setApiStatus('offline');
         return saved;
     }
 }
@@ -145,7 +160,7 @@ async function deletePost(id) {
         const filtered = posts.filter(p => p.id !== id);
         saveLocalPosts(filtered);
         cachedPosts = filtered;
-        setApiStatus(false);
+        setApiStatus('offline');
         return true;
     }
 }
@@ -159,7 +174,7 @@ async function seedPosts() {
     } catch (err) {
         saveLocalPosts(defaultPosts);
         cachedPosts = [...defaultPosts];
-        setApiStatus(false);
+        setApiStatus('offline');
         return cachedPosts;
     }
 }
