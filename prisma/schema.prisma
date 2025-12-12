@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(cuid())
+  name       String
+  email      String   @unique
+  password   String
+  role       Role     @default(READER)
+  bio        String?  
+  avatarUrl  String?
+  linkedIn   String?
+  posts      Post[]
+}
+
+model Post {
+  id            String    @id @default(cuid())
+  title         String
+  slug          String    @unique
+  subtitle      String?
+  content       String
+  status        PostStatus @default(DRAFT)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  publishedAt   DateTime?
+  seoTitle      String?
+  seoDescription String?
+  coverImage    String?
+  author        User      @relation(fields: [authorId], references: [id])
+  authorId      String
+  tags          PostTag[]
+}
+
+model Tag {
+  id    String @id @default(cuid())
+  name  String
+  slug  String @unique
+  posts PostTag[]
+}
+
+model PostTag {
+  post   Post @relation(fields: [postId], references: [id])
+  postId String
+  tag    Tag  @relation(fields: [tagId], references: [id])
+  tagId  String
+  @@id([postId, tagId])
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  summary     String
+  body        String
+  tags        String
+  location    String
+  projectType String
+  startYear   Int?
+  endYear     Int?
+}
+
+model Testimonial {
+  id       String  @id @default(cuid())
+  client   String
+  quote    String
+  role     String
+  company  String
+  logoUrl  String?
+}
+
+model ContactMessage {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  company    String?
+  country    String?
+  message    String
+  createdAt  DateTime @default(now())
+  processed  Boolean  @default(false)
+}
+
+enum Role {
+  ADMIN
+  AUTHOR
+  READER
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+}
